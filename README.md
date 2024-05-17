@@ -1,1 +1,1 @@
-This is the official code and data repository of EDZ-DA
+This is the official code and data repository of EDZ-DA.
