@@ -1,0 +1,18 @@
+Given the following dialogue state with various domain-slot pairings that include specific details:
+
+{}.
+
+Construct the user’s overall goal for the ensuing conversation based solely on the information provided in the dialogue state. The user goal should be as specific as possible while adhering to the following guidelines:
+
+- Do not include any specific names of restaurants, hotels and attractions that are present in the dialogue state. These details are meant to be suggested by the agent during the conversation.
+- Do not infer or add any information beyond what is present in the dialogue state. Use only the details provided in the slots.
+- The order in which the domain-slot pairings are presented is not indicative of importance or the sequence of addressing them in the dialogue. The language model should determine the logical flow and prioritization independently.
+- Ensure that the user goal lays a foundation for a focused yet dynamic interaction, where the agent has the opportunity to make recommendations and the user can respond or confirm these suggestions.
+
+The objective is to clarify what the user intends to achieve or learn during the interaction without presuming or preempting the agent's role in guiding the conversation.
+
+Example of a properly constructed user goal:
+
+"User aims to find [general need based on dialogue state], with preferences matching [specific preferences], and is looking for recommendations on [broad categories without naming specific entities]."
+
+Please proceed by formulating a user goal that aligns with these criteria.

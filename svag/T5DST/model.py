@@ -61,7 +61,7 @@ class DSTModel(pl.LightningModule):
                     "slot": each["slot"][idx],
                     "value": ea,
                 })
-        with open("/public/home/lianghe/gm/llama-project/T5DST/output/{}.json".format(self.args.result_name), 'w', encoding="utf-8") as f:
+        with open("./output/{}.json".format(self.args.result_name), 'w', encoding="utf-8") as f:
             json.dump(ans, f, ensure_ascii=False, indent=2)
 
     def configure_optimizers(self):

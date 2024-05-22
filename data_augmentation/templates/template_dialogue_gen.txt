@@ -1,0 +1,25 @@
+Given the user goal inferred from the dialogue state and without introducing new information or omitting any details from the dialogue state, simulate a brief and casual dialogue between a user and an agent. The user should communicate with the agent according to the user goal. The agent should carefully catch the user’s intention and help the user with his/her needs. The agent does not know any thing about the user goal. The given dialogue state summarize the overall dialogue.
+
+The conversation should be initiated by the system and concluded by the user, with each turn consisting of strictly one system utterance followed by one user utterance. The dialogue should not exceed 12 turns in total. After each turn, include only the turn state relevant to that specific turn's user intention and confirmation, and make sure to reflect only the new or affirmed information without repeating the entire dialogue history. Collectively, the turn states throughout the conversation should encompass the entire initial dialogue state by the conclusion. The turn label should not be more than 5 domain-slot-values. Note that each slot value should appear in the utterances explicitly.
+
+User Goal:
+{}
+
+Dialogue State:
+{}
+
+Begin the simulated conversation with the system's opening utterance. Ensure the JSON output follows the format below, with attention to the turn state restriction provided:
+
+[
+{{
+    "system": "<Insert system utterance here>",
+    "user": "<Insert user's response here>",
+    "turn state": {{"relevant-domain-slot": "relevant value"}}
+}},
+// ... Continue with subsequent turns
+{{
+    "system": "<Insert system utterance here>",
+    "user": "<Insert user utterance here>",
+    "turn state": {{"domain-slot": "relevant value"}}
+}}
+]

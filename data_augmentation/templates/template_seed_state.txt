@@ -1,0 +1,11 @@
+So, based on your judgement, please help me generate several dialogue states with different inferrable information. Each dialogue state is in forms of a dictionary where the key is the domain-slot and the value is the corresponding value. The dialogue state summarizes a user’s goal in his/her dialogue with an AI agent. You should determine the number of states yourself based on your judgement and output your answer with a list of dialogue states.
+
+You can determine the values of the categorical slots yourself. Values of other non-categorical slots should be left blank (an empty string), and I will fill them. Note that values should be logical among different domains. What’s more, some the values may be the value of another domain. Please express this information by “domain1-slot”: “domain2-slot”. But note that you cannot refer to domains that are not mentioned in the current domains. And there are some restrictions in my system:
+
+1) slots {'departure', ‘destination’} cannot be inferred from slot 'area'.
+2) slots {'arrive by', 'leave at', 'book time'} cannot be inferred from slots {'day', 'book day'} and vice versa.
+3) area can only be inferred from area.
+4) train-destination and train-departure cannot be inferred from other domain.
+5) inferable slots must be different domains.
+6) Please carefully refer to the schema I have given in the former turn. Only legal slots in a certain domain can be inferred.
+7) Infer from a blank slot is allowed since I will fill in all the blank slots later.
